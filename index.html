@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Portafolio Personal</title>
+    <!-- Importar Tailwind CSS desde CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Configuración personalizada de la paleta de colores de Tailwind -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        crema: '#FAF6EF',
+                        azulNoche: '#14213D',
+                        naranjaPedal: '#F39A2B',
+                        verdeRuta: '#1E7A4F',
+                        grisAsfalto: '#5B6470'
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- FontAwesome CDN para íconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Configuración básica de fuentes (opcional pero recomendado para un diseño limpio) -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        html { scroll-behavior: smooth; }
+    </style>
+</head>
+<body class="bg-crema text-grisAsfalto antialiased">
+
+    <!-- HEADER -->
+    <header class="bg-azulNoche shadow-md sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+            <!-- Logo a la izquierda -->
+            <a href="#" class="text-2xl font-bold text-crema tracking-tight">
+                Mi<span class="text-naranjaPedal">Portafolio</span>
+            </a>
+            
+            <!-- Enlaces a la derecha -->
+            <nav class="hidden md:flex space-x-8">
+                <a href="#inicio" class="text-crema hover:text-naranjaPedal font-medium transition-colors">Inicio</a>
+                <a href="#proyectos" class="text-crema hover:text-naranjaPedal font-medium transition-colors">Proyectos</a>
+                <a href="#contacto" class="text-crema hover:text-naranjaPedal font-medium transition-colors">Contacto</a>
+            </nav>
+
+            <!-- Menú hamburguesa para móviles (solo visual) -->
+            <button class="md:hidden text-crema hover:text-naranjaPedal focus:outline-none transition-colors">
+                <i class="fa-solid fa-bars text-2xl"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- HOJA DE VIDA / PERFIL PROFESIONAL -->
+    <main id="inicio" class="max-w-5xl mx-auto px-4 py-12 md:py-20">
+        <div class="bg-white rounded-2xl shadow-xl overflow-hidden">
+            
+            <!-- Encabezado del CV -->
+            <div class="bg-azulNoche p-8 md:p-12 text-center md:text-left flex flex-col md:flex-row items-center gap-8 relative overflow-hidden">
+                <!-- Decoración de fondo sutil -->
+                <div class="absolute -right-20 -top-20 opacity-10 text-9xl">
+                    <i class="fa-solid fa-code"></i>
+                </div>
+                
+                <!-- Ícono de Perfil (Reemplazo de foto) -->
+                <div class="w-32 h-32 bg-crema rounded-full flex items-center justify-center text-azulNoche shrink-0 border-4 border-naranjaPedal relative z-10 shadow-lg">
+                    <i class="fa-solid fa-laptop-code text-5xl"></i>
+                </div>
+                <div class="relative z-10">
+                    <h1 class="text-3xl md:text-5xl font-extrabold text-crema mb-2 tracking-tight">Manuela Roldán Cano</h1>
+                    <p class="text-naranjaPedal text-lg md:text-xl font-semibold mb-5">
+                        Desarrolladora Web & Estudiante de Ingeniería Biomédica
+                    </p>
+                    <div class="flex flex-wrap justify-center md:justify-start gap-5 text-crema/80 text-sm font-medium">
+                        <span class="flex items-center gap-2"><i class="fa-solid fa-location-dot text-naranjaPedal"></i> Colombia</span>
+                        <a href="#contacto" class="flex items-center gap-2 hover:text-white transition-colors"><i class="fa-solid fa-envelope text-naranjaPedal"></i> Contactar</a>
+                        <a href="#" class="flex items-center gap-2 hover:text-white transition-colors"><i class="fa-brands fa-github text-naranjaPedal"></i> GitHub</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Cuerpo del CV: Layout de 2 Columnas -->
+            <div class="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-gray-100">
+                
+                <!-- Columna Izquierda (Sidebar) -->
+                <div class="p-8 md:col-span-1 bg-gray-50/50">
+                    
+                    <!-- Habilidades Técnicas -->
+                    <div class="mb-12">
+                        <h2 class="text-lg font-bold text-azulNoche mb-6 flex items-center gap-3 border-b-2 border-naranjaPedal pb-2 inline-flex uppercase tracking-wider">
+                            <i class="fa-solid fa-code text-naranjaPedal"></i> Habilidades
+                        </h2>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-azulNoche text-crema px-3 py-1.5 rounded text-sm font-medium shadow-sm"><i class="fa-brands fa-js text-yellow-400 mr-1"></i> JavaScript</span>
+                            <span class="bg-azulNoche text-crema px-3 py-1.5 rounded text-sm font-medium shadow-sm"><i class="fa-brands fa-html5 text-orange-500 mr-1"></i> HTML5</span>
+                            <span class="bg-azulNoche text-crema px-3 py-1.5 rounded text-sm font-medium shadow-sm"><i class="fa-brands fa-css3-alt text-blue-400 mr-1"></i> CSS3</span>
+                            <span class="bg-azulNoche text-crema px-3 py-1.5 rounded text-sm font-medium shadow-sm"><i class="fa-solid fa-wind text-teal-400 mr-1"></i> Tailwind CSS</span>
+                            <span class="bg-azulNoche text-crema px-3 py-1.5 rounded text-sm font-medium shadow-sm"><i class="fa-brands fa-git-alt text-red-400 mr-1"></i> Git</span>
+                            <span class="bg-azulNoche text-crema px-3 py-1.5 rounded text-sm font-medium shadow-sm"><i class="fa-brands fa-github text-white mr-1"></i> GitHub</span>
+                        </div>
+                    </div>
+                    <!-- Idiomas -->
+                    <div>
+                        <h2 class="text-lg font-bold text-azulNoche mb-6 flex items-center gap-3 border-b-2 border-naranjaPedal pb-2 inline-flex uppercase tracking-wider">
+                            <i class="fa-solid fa-language text-naranjaPedal"></i> Idiomas
+                        </h2>
+                        <ul class="space-y-4">
+                            <li class="flex justify-between items-center bg-white p-3 rounded-lg shadow-sm border border-gray-100">
+                                <span class="font-bold text-grisAsfalto">Español</span>
+                                <span class="text-xs bg-verdeRuta text-white px-2.5 py-1 rounded-full font-semibold">Nativo</span>
+                            </li>
+                            <li class="flex justify-between items-center bg-white p-3 rounded-lg shadow-sm border border-gray-100">
+                                <span class="font-bold text-grisAsfalto">Inglés</span>
+                                <span class="text-xs bg-gray-200 text-azulNoche px-2.5 py-1 rounded-full font-semibold">Básico</span>
+                            </li>
+                            <li class="flex justify-between items-center bg-white p-3 rounded-lg shadow-sm border border-gray-100">
+                                <span class="font-bold text-grisAsfalto">Portugués</span>
+                                <span class="text-xs bg-gray-200 text-azulNoche px-2.5 py-1 rounded-full font-semibold">Intermedio</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Columna Derecha (Contenido Principal) -->
+                <div class="p-8 md:col-span-2">
+                    
+                    <!-- Perfil Profesional -->
+                    <div class="mb-12">
+                        <h2 class="text-2xl font-bold text-azulNoche mb-5 flex items-center gap-3">
+                            <i class="fa-solid fa-user-tie text-naranjaPedal"></i> Perfil Profesional
+                        </h2>
+                        <p class="text-grisAsfalto leading-relaxed text-lg text-justify">
+                            Desarrolladora en formación con un enfoque analítico y estructurado, combinando bases sólidas en desarrollo web (JavaScript, HTML, CSS) con el rigor técnico de la ingeniería biomédica. Apasionada por resolver problemas complejos, estructurar algoritmos y crear interfaces limpias y funcionales que mejoren la experiencia del usuario.
+                        </p>
+                    </div>
+                    <!-- Educación -->
+                    <div id="educacion">
+                        <h2 class="text-2xl font-bold text-azulNoche mb-8 flex items-center gap-3">
+                            <i class="fa-solid fa-graduation-cap text-naranjaPedal"></i> Educación
+                        </h2>
+                        
+                        <!-- Línea de tiempo -->
+                        <div class="space-y-8 border-l-2 border-naranjaPedal/30 ml-3 md:ml-4">
+                            
+                            <!-- Item 1 -->
+                            <div class="relative pl-8">
+                                <span class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-naranjaPedal border-2 border-white shadow"></span>
+                                <div class="bg-gray-50 hover:bg-white p-5 rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition-all">
+                                    <h3 class="text-xl font-bold text-azulNoche">Bootcamp de Desarrollo de Software</h3>
+                                    <p class="text-verdeRuta font-semibold mb-2">
+                                        <i class="fa-solid fa-laptop-code mr-1"></i> Formación Especializada
+                                    </p>
+                                    <p class="text-grisAsfalto text-sm leading-relaxed">
+                                        Entrenamiento intensivo enfocado en tecnologías Frontend y buenas prácticas de programación, control de versiones y lógica algorítmica.
+                                    </p>
+                                </div>
+                            </div>
+                            <!-- Item 2 -->
+                            <div class="relative pl-8">
+                                <span class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-grisAsfalto border-2 border-white shadow"></span>
+                                <div class="bg-gray-50 hover:bg-white p-5 rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition-all">
+                                    <h3 class="text-xl font-bold text-azulNoche">Pregrado en Ingeniería Biomédica</h3>
+                                    <p class="text-verdeRuta font-semibold mb-2">
+                                        <i class="fa-solid fa-microscope mr-1"></i> Universidad
+                                    </p>
+                                    <p class="text-grisAsfalto text-sm leading-relaxed">
+                                        Formación analítica enfocada en la resolución de problemas técnicos, estructuración de sistemas y aplicación de la tecnología al ámbito de la salud.
+                                    </p>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer id="contacto" class="bg-azulNoche text-crema py-12">
+        <div class="max-w-6xl mx-auto px-4 text-center">
+            <h3 class="text-2xl font-bold text-crema mb-4">¿Trabajamos juntos?</h3>
+            <p class="mb-6 max-w-md mx-auto text-crema/80">Si te interesa mi perfil y tienes una oportunidad o proyecto en mente, no dudes en contactarme.</p>
+            
+            <a href="mailto:correo@ejemplo.com" class="inline-flex items-center justify-center bg-transparent border-2 border-naranjaPedal text-naranjaPedal px-6 py-2 rounded-lg font-medium hover:bg-naranjaPedal hover:text-white transition-colors mb-10">
+                <i class="fa-solid fa-envelope mr-2"></i>
+                Contactar por Correo
+            </a>
+            
+            <div class="border-t border-crema/20 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-sm text-crema/60 mb-4 md:mb-0">
+                    &copy; 2026 Manuela Roldán Cano. Todos los derechos reservados.
+                </p>
+                <!-- Redes sociales (Iconos FontAwesome) -->
+                <div class="flex space-x-6">
+                    <a href="#" class="text-crema/60 hover:text-naranjaPedal transition-colors" aria-label="GitHub">
+                        <i class="fa-brands fa-github text-2xl"></i>
+                    </a>
+                    <a href="#" class="text-crema/60 hover:text-naranjaPedal transition-colors" aria-label="LinkedIn">
+                        <i class="fa-brands fa-linkedin text-2xl"></i>
+                    </a>
+                    <a href="#" class="text-crema/60 hover:text-naranjaPedal transition-colors" aria-label="Twitter">
+                        <i class="fa-brands fa-twitter text-2xl"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
+
+
+
+
+
